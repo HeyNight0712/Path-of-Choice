@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import data.player;
 import data.system_value;
-import discord.data.data;
 import event.player.control;
 import event.set.load;
 

@@ -6,8 +6,6 @@ import java.util.Scanner;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-import discord.start;
-
 public class lang {
     public static String HP;
     public static String MP;

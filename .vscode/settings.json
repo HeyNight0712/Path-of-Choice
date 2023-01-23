@@ -2,6 +2,14 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "libs/gson-2.8.2.jar",
-        "libs/json-simple-1.1.1.jar"
+        "libs/json-simple-1.1.1.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx.base.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx.controls.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx.fxml.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx.graphics.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx.media.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx.swing.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx.web.jar",
+        "g:\\java\\javafx-sdk-19.0.2\\lib\\javafx-swt.jar"
     ]
 }

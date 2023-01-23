@@ -3,8 +3,6 @@ package event.set;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import discord.start;
-
 public class load {
 
     public static void detection() throws Exception {
