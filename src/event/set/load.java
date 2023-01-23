@@ -15,8 +15,6 @@ public class load {
         file.config.config_folder();
         file.lang.lang_folder();
         file.language.zh_tw.create_file();
-        file.equip_shop.create_file();
-        file.skill_shop.create_file();
         file.mobs.create_file();
         data.player.restart();
         data.lang.lang_use();

@@ -1,4 +1,4 @@
-package event.skills_merchant;
+package object.npc.skills_merchant;
 
 import java.io.FileReader;
 import java.util.Random;
@@ -8,12 +8,17 @@ import com.google.gson.JsonObject;
 
 public class npc {
 
-    static int talktype;
+    // 寫入 npc ID
+    public static String[] talktype = {
+            "Steno_Mirivie",
+            "Marwell",
+            "Naina"
+    };
+    public static String Random;
 
     // 隨機NPC
     public static void random_npc() throws Exception {
-        Random rand = new Random();
-        talktype = rand.nextInt(3) + 1;
+        Random = talktype[new Random().nextInt(talktype.length)];
         getNPCTalk();
     }
 
@@ -22,7 +27,7 @@ public class npc {
         Gson gson = new Gson();
         FileReader reader = new FileReader("lang/" + data.system_value.lang + ".json");
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
-        JsonObject player = jsonObject.getAsJsonObject("NPC" + talktype);
+        JsonObject player = jsonObject.getAsJsonObject("skill_merchant").getAsJsonObject(Random);
         String name = player.get("name").getAsString();
         System.out.println("----------");
         int talkNumber = new Random().nextInt(4) + 1;

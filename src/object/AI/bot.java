@@ -1,4 +1,4 @@
-package event.fighting.bot;
+package object.AI;
 
 import java.util.Random;
 

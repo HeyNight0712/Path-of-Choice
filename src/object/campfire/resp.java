@@ -1,4 +1,4 @@
-package event.campfire;
+package object.campfire;
 
 //營火
 public class resp {
