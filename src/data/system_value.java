@@ -5,4 +5,5 @@ public class system_value {
     // 1 敵方
     public static int round;
     public static int day;
+    public static String lang = "zh_tw";
 }

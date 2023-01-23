@@ -28,20 +28,24 @@ public class lang {
         lang_use = "zh_tw";
         Gson gson = new Gson();
         FileReader reader = new FileReader("lang/" + lang_use + ".json");
+
+        // 讀取 翻譯數據
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
-        JsonObject player = jsonObject.getAsJsonObject(lang_use);
-        HP = player.get("HP").getAsString();
-        MP = player.get("MP").getAsString();
-        Damage = player.get("Dam").getAsString();
-        Defense = player.get("Def").getAsString();
-        EXP = player.get("EXP").getAsString();
-        GOLD = player.get("GOLD").getAsString();
-        move = player.get("move").getAsString();
-        item = player.get("item").getAsString();
-        attack = player.get("attack").getAsString();
-        skill = player.get("skill").getAsString();
+        HP = jsonObject.get("HP").getAsString();
+        MP = jsonObject.get("MP").getAsString();
+        Damage = jsonObject.get("Dam").getAsString();
+        Defense = jsonObject.get("Def").getAsString();
+        EXP = jsonObject.get("EXP").getAsString();
+        GOLD = jsonObject.get("GOLD").getAsString();
+
+        // 系統
+        JsonObject player = jsonObject.getAsJsonObject("system");
+        move = player.get("Move").getAsString();
+        item = player.get("Item").getAsString();
+        attack = player.get("Attack").getAsString();
+        skill = player.get("Skill").getAsString();
         Attributes = player.get("Attributes").getAsString();
-        defense = player.get("defense").getAsString();
+        defense = player.get("Defense").getAsString();
 
     }
 }

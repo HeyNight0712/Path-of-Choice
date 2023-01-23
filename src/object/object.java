@@ -5,7 +5,7 @@ import java.io.File;
 //創建檔案 設置
 public class object {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         File configDir = new File("config");
         if (!configDir.exists()) {
             configDir.mkdir();
@@ -13,5 +13,6 @@ public class object {
         } else {
             System.out.println(data.text.info_system + "- 讀取 config");
         }
+        ;
     }
 }
