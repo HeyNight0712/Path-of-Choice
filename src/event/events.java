@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import data.use_mob;
 import data.player;
-import file.mobs;
+import object.mob.random;
 
 public class events {
     // 敘述
@@ -72,7 +72,7 @@ public class events {
     // 尋找事件 回應
     public void event() throws Exception {
         if (Random.equals("戰鬥")) {
-            mobs.random_npc();
+            random.random();
             System.out.println(data.text.info_system + "遇到 : " + use_mob.name);
             event.round.round_set();
         } else if (Random.equals("營火")) {

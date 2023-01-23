@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import data.system_value;
+import data.use_mob;
 
 public class data {
     public static String Name;
@@ -31,7 +32,7 @@ public class data {
         Gson gson = new Gson();
         FileReader reader = new FileReader("lang/" + system_value.lang + ".json");
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
-        JsonObject mob = jsonObject.getAsJsonObject("skill_merchant");
+        JsonObject mob = jsonObject.getAsJsonObject("mobslist");
         Name = mob.get("Zombie").getAsString();
     }
 
@@ -46,5 +47,19 @@ public class data {
         LV = 1;
         EXP = (int) ((float) 5 + ((float) LV * 0.7));
         Gold = (int) ((float) 3 + ((float) LV * 0.5));
+    }
+
+    public static void use() {
+        use_mob.name = Name;
+        use_mob.HP = HP;
+        use_mob.HP_max = HP_max;
+        use_mob.MP = MP_max;
+        use_mob.MP_max = MP_max;
+        use_mob.Damage = Damage;
+        use_mob.Hit = Hit;
+        use_mob.Defense = Defense;
+        use_mob.LV = LV;
+        use_mob.EXP = EXP;
+        use_mob.Gold = Gold;
     }
 }

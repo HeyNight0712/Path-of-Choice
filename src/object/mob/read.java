@@ -8,7 +8,6 @@ public class read {
         object.mob.fairy.data.read();
         object.mob.ghost.data.read();
         object.mob.kitsune.data.read();
-        object.mob.kraken.data.read();
         object.mob.lich.data.read();
         object.mob.orc.data.read();
         object.mob.skeleton.data.read();

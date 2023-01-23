@@ -32,7 +32,7 @@ public class data {
         Gson gson = new Gson();
         FileReader reader = new FileReader("lang/" + system_value.lang + ".json");
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
-        JsonObject mob = jsonObject.getAsJsonObject("skill_merchant");
+        JsonObject mob = jsonObject.getAsJsonObject("mobslist");
         Name = mob.get("Ghost").getAsString();
     }
 
@@ -50,6 +50,7 @@ public class data {
     }
 
     public static void use() {
+        use_mob.name = Name;
         use_mob.HP = HP;
         use_mob.HP_max = HP_max;
         use_mob.MP = MP_max;

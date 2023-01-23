@@ -15,9 +15,9 @@ public class load {
         file.config.config_folder();
         file.lang.lang_folder();
         file.language.zh_tw.create_file();
-        file.mobs.create_file();
         data.player.restart();
         data.lang.lang_use();
+        object.mob.read.load_mob_name();
         System.out.println("====================");
         TimeUnit.SECONDS.sleep(1);
         System.out.println("確認完畢" + "\n");
