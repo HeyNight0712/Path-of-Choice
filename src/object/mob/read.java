@@ -14,6 +14,6 @@ public class read {
         object.mob.statue_ghost.data.read();
         object.mob.vampire.data.read();
         object.mob.zombie.data.read(); // 殭屍
-        System.out.println("載入 生物 名稱");
+        System.out.println(data.text.info_system + "- 載入 " + data.system_value.lang + " 生物 名稱");
     }
 }

@@ -15,22 +15,11 @@ public class load {
         file.config.config_folder();
         file.lang.lang_folder();
         file.language.zh_tw.create_file();
-        data.player.restart();
         data.lang.lang_use();
         object.mob.read.load_mob_name();
+        data.player.restart();
         System.out.println("====================");
         TimeUnit.SECONDS.sleep(1);
         System.out.println("確認完畢" + "\n");
-    }
-
-    // 選擇 語言
-    public static void lang_choose() throws Exception {
-        Scanner lang_text = new Scanner(System.in);
-        System.out.println("選擇你的語言");
-        System.out.println("============");
-        System.out.println("[1] en_us 英文");
-        System.out.println("[2] zh_cn 中文(簡體)");
-        System.out.println("[3] zh_tw 中文(繁體)");
-        System.out.println("============");
     }
 }
