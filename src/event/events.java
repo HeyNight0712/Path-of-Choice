@@ -77,13 +77,13 @@ public class events {
             event.round.round_set();
         } else if (Random.equals("營火")) {
             System.out.println(data.text.info_system + "找到休息區域");
-            event.campfire.resp.trigger();
+            object.campfire.resp.trigger();
         } else if (Random.equals("武器商人")) {
             System.out.println(data.text.info_system + "遇見武器商人");
-            event.equipment_trader.npc.random_npc();
+            object.npc.equipment_trader.npc.random_npc();
         } else if (Random.equals("魔法商人")) {
             System.out.println(data.text.info_system + "遇見魔法商人");
-            event.skills_merchant.npc.random_npc();
+            object.npc.skills_merchant.npc.random_npc();
 
         }
     }

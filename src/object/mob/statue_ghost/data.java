@@ -1,4 +1,4 @@
-package object.mob.demon;
+package object.mob.statue_ghost;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -32,7 +32,7 @@ public class data {
         FileReader reader = new FileReader("lang/" + system_value.lang + ".json");
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
         JsonObject mob = jsonObject.getAsJsonObject("skill_merchant");
-        Name = mob.get("Demon").getAsString();
+        Name = mob.get("Statue_Ghost").getAsString();
     }
 
     public static void restart() {

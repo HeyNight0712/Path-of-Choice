@@ -8,7 +8,7 @@ import data.monster;
 import data.player;
 import data.system_value;
 import event.round;
-import event.fighting.bot.bot;
+import object.AI.bot;
 
 public class att_def {
 

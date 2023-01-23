@@ -9,7 +9,7 @@ import data.monster;
 import data.player;
 import data.system_value;
 import event.fighting.att_def;
-import event.fighting.bot.bot;
+import object.AI.bot;
 
 //計算回合 /天數
 public class round {
