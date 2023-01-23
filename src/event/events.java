@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import data.monster;
+import data.use_mob;
 import data.player;
 import file.mobs;
 
@@ -73,7 +73,7 @@ public class events {
     public void event() throws Exception {
         if (Random.equals("戰鬥")) {
             mobs.random_npc();
-            System.out.println(data.text.info_system + "遇到 : " + monster.name);
+            System.out.println(data.text.info_system + "遇到 : " + use_mob.name);
             event.round.round_set();
         } else if (Random.equals("營火")) {
             System.out.println(data.text.info_system + "找到休息區域");

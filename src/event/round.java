@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import data.lang;
-import data.monster;
+import data.use_mob;
 import data.player;
 import data.system_value;
 import event.fighting.att_def;
@@ -15,7 +15,7 @@ import object.AI.bot;
 public class round {
     // 物件導入
     player player = new player();
-    monster mob = new monster();
+    use_mob mob = new use_mob();
     system_value system_value = new system_value();
     static bot bot = new bot();
     // 未實施
@@ -44,7 +44,7 @@ public class round {
             user();
             data.system_value.round = 1;
         } else if (data.system_value.round == 1) {
-            System.out.println("\n" + "輪到 " + monster.name);
+            System.out.println("\n" + "輪到 " + use_mob.name);
             System.out.println("==========");
             bot.probability();
             data.system_value.round = 0;
@@ -97,15 +97,15 @@ public class round {
     // 查看
     public static void use_Attributes() throws Exception {
         Scanner player_text = new Scanner(System.in);
-        System.out.println("[1] " + data.player.name + " [2] " + monster.name);
+        System.out.println("[1] " + data.player.name + " [2] " + use_mob.name);
         String player_text_use = player_text.nextLine();
         player_use = player_text_use;
         if (player_use.equals("1")) {
             System.out.println("你正在查看" + data.player.name);
             data.player.info();
         } else if (player_use.equals("2")) {
-            System.out.println("你正在查看" + monster.name);
-            data.monster.info();
+            System.out.println("你正在查看" + use_mob.name);
+            data.use_mob.info();
         } else {
             System.out.println("回到上一步");
         }

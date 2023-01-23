@@ -1,7 +1,7 @@
 package data;
 
 //敵方數值
-public class monster {
+public class use_mob {
     public static String name = "None";
 
     public static int HP;

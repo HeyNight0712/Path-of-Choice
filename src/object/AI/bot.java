@@ -3,7 +3,7 @@ package object.AI;
 import java.util.Random;
 
 import data.lang;
-import data.monster;
+import data.use_mob;
 import event.fighting.att_def;
 
 public class bot {
@@ -14,13 +14,13 @@ public class bot {
         Random rand = new Random();
         bot_use = rand.nextInt(100);
         if (0 <= bot_use && 59 >= bot_use) {
-            System.out.println(monster.name + " 使出了" + lang.attack);
+            System.out.println(use_mob.name + " 使出了" + lang.attack);
             combat.ATT();
         } else if (60 >= bot_use && 89 <= bot_use) {
-            System.out.println(monster.name + " 使出了" + lang.Attributes);
+            System.out.println(use_mob.name + " 使出了" + lang.Attributes);
             combat.ATT();
         } else {
-            System.out.println(monster.name + " 使出了" + lang.skill);
+            System.out.println(use_mob.name + " 使出了" + lang.skill);
         }
     }
 }

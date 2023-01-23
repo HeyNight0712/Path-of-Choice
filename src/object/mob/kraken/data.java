@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import data.system_value;
+import data.use_mob;
 
 public class data {
     public static String Name;
@@ -46,5 +47,18 @@ public class data {
         LV = 1;
         EXP = (int) ((float) 5 + ((float) LV * 0.7));
         Gold = (int) ((float) 3 + ((float) LV * 0.5));
+    }
+
+    public static void use() {
+        use_mob.HP = HP;
+        use_mob.HP_max = HP_max;
+        use_mob.MP = MP_max;
+        use_mob.MP_max = MP_max;
+        use_mob.Damage = Damage;
+        use_mob.Hit = Hit;
+        use_mob.Defense = Defense;
+        use_mob.LV = LV;
+        use_mob.EXP = EXP;
+        use_mob.Gold = Gold;
     }
 }

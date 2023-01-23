@@ -1,5 +1,6 @@
 
 
-read 讀取 lang語言的 mob name
+read.java 讀取 lang語言的 mob name
 每隻怪物名 資料夾 功能
-data  紀錄/重製 data值
+data()  紀錄/重製 data值
+use() 繼承 data/mob 資料

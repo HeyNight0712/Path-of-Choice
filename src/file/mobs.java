@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import com.google.gson.JsonObject;
 
-import data.monster;
+import data.use_mob;
 
 import java.util.Random;
 
@@ -131,15 +131,15 @@ public class mobs {
         FileReader reader = new FileReader("config/mobs.json");
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
         JsonObject mob = jsonObject.getAsJsonObject("mob" + talktype);
-        monster.name = mob.get("name").getAsString();
-        monster.LV = mob.get("LV").getAsInt();
-        monster.HP = mob.get("HP").getAsInt();
-        monster.HP_max = monster.HP;
-        monster.MP = mob.get("MP").getAsInt();
-        monster.MP_max = monster.MP;
-        monster.Damage = mob.get("Damage").getAsInt();
-        monster.Hit = mob.get("Hit").getAsInt();
-        monster.EXP = mob.get("EXP").getAsInt();
-        monster.Gold = mob.get("GOLD").getAsInt();
+        use_mob.name = mob.get("name").getAsString();
+        use_mob.LV = mob.get("LV").getAsInt();
+        use_mob.HP = mob.get("HP").getAsInt();
+        use_mob.HP_max = use_mob.HP;
+        use_mob.MP = mob.get("MP").getAsInt();
+        use_mob.MP_max = use_mob.MP;
+        use_mob.Damage = mob.get("Damage").getAsInt();
+        use_mob.Hit = mob.get("Hit").getAsInt();
+        use_mob.EXP = mob.get("EXP").getAsInt();
+        use_mob.Gold = mob.get("GOLD").getAsInt();
     }
 }

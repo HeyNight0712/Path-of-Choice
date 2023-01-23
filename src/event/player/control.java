@@ -3,7 +3,7 @@ package event.player;
 import java.util.Scanner;
 
 import data.lang;
-import data.monster;
+import data.use_mob;
 import data.player;
 import data.system_value;
 import event.events;
@@ -16,7 +16,7 @@ public class control {
     events events = new events();
     round round = new round();
     player player = new player();
-    monster mob = new monster();
+    use_mob mob = new use_mob();
     count count = new count();
     int Day;
 
@@ -26,9 +26,9 @@ public class control {
             System.out.println("今天是第 " + Day + " 天" + "\n");
             move();
             // 戰鬥 結果畫面
-            while (data.player.HP >= 1 && monster.HP >= 1) {
+            while (data.player.HP >= 1 && mob.HP >= 1) {
                 round.who();
-                if (monster.HP <= 0) {
+                if (mob.HP <= 0) {
                     count.EXP();
                 } else if (data.player.HP <= 0) {
                     // 修改
