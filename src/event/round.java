@@ -4,19 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import data.lang;
-import data.use_mob;
-import data.player;
-import data.system_value;
-import event.fighting.att_def;
-import object.AI.bot;
+import bot.bot;
 
 //計算回合 /天數
 public class round {
     // 物件導入
-    player player = new player();
-    use_mob mob = new use_mob();
-    system_value system_value = new system_value();
+
     static bot bot = new bot();
     // 未實施
     public static int Day;
@@ -31,23 +24,23 @@ public class round {
     // 隨機回合
     public static void round_set() throws Exception {
         Random rand = new Random();
-        data.system_value.round = rand.nextInt(2);
+        bot.system_value.round = rand.nextInt(2);
         who();
     }
 
     // 隨機回合反應
     public static void who() throws Exception {
         TimeUnit.SECONDS.sleep(2);
-        if (data.system_value.round == 0) {
-            System.out.println("\n" + "輪到 " + data.player.name);
+        if (bot.system_value.round == 0) {
+            System.out.println("\n" + "輪到 " + player.player.name);
             System.out.println("==========");
             user();
-            data.system_value.round = 1;
-        } else if (data.system_value.round == 1) {
+            bot.system_value.round = 1;
+        } else if (bot.system_value.round == 1) {
             System.out.println("\n" + "輪到 " + use_mob.name);
             System.out.println("==========");
             bot.probability();
-            data.system_value.round = 0;
+            bot.system_value.round = 0;
         } else {
             System.out.println("回合錯誤 請回報!!!");
         }
