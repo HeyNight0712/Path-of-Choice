@@ -23,44 +23,34 @@ public class random {
         String Random = rand_mob[new Random().nextInt(rand_mob.length)];
         switch (Random) {
             case "demon":
-                object.mob.demon.data.restart();
-                object.mob.demon.data.use();
+                object.mob.demon.data.read();
                 break;
             case "fairy":
-                object.mob.fairy.data.restart();
-                object.mob.fairy.data.use();
+                object.mob.fairy.data.read();
                 break;
             case "ghost":
-                object.mob.ghost.data.restart();
-                object.mob.ghost.data.use();
+                object.mob.ghost.data.read();
                 break;
             case "kitsune":
-                object.mob.kitsune.data.restart();
-                object.mob.kitsune.data.use();
+                object.mob.kitsune.data.read();
                 break;
             case "lich":
-                object.mob.lich.data.restart();
-                object.mob.lich.data.use();
+                object.mob.lich.data.read();
                 break;
             case "orc":
-                object.mob.orc.data.restart();
-                object.mob.orc.data.use();
+                object.mob.orc.data.read();
                 break;
             case "skeleton":
-                object.mob.skeleton.data.restart();
-                object.mob.skeleton.data.use();
+                object.mob.skeleton.data.read();
                 break;
             case "statue_ghost":
-                object.mob.statue_ghost.data.restart();
-                object.mob.statue_ghost.data.use();
+                object.mob.statue_ghost.data.read();
                 break;
             case "vampire":
-                object.mob.vampire.data.restart();
-                object.mob.vampire.data.use();
+                object.mob.vampire.data.read();
                 break;
             case "zombie":
-                object.mob.zombie.data.restart();
-                object.mob.zombie.data.use();
+                object.mob.zombie.data.read();
                 break;
         }
     }

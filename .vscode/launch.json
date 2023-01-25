@@ -6,36 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch text",
-            "request": "launch",
-            "mainClass": "text",
-            "projectName": "word_71c137b0"
-        },
-        {
-            "type": "java",
-            "name": "Launch object",
-            "request": "launch",
-            "mainClass": "object.object",
-            "projectName": "word_71c137b0"
-        },
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch main",
+            "name": "主載入",
             "request": "launch",
             "mainClass": "main.main",
-            "projectName": "word_71c137b0"
-        },
-        {
-            "type": "java",
-            "name": "Launch view",
-            "request": "launch",
-            "mainClass": "view.view",
             "projectName": "word_71c137b0",
             "vmArgs": "--module-path \"G:/java/javafx-sdk-19.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         }

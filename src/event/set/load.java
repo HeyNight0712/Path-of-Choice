@@ -16,7 +16,6 @@ public class load {
         file.lang.lang_folder();
         file.language.zh_tw.create_file();
         data.lang.lang_use();
-        object.mob.read.load_mob_name();
         data.player.restart();
         System.out.println("====================");
         TimeUnit.SECONDS.sleep(1);
