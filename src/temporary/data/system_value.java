@@ -1,4 +1,4 @@
-package bot;
+package data;
 
 public class system_value {
     // 0 我方

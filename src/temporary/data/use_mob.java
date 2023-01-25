@@ -1,6 +1,4 @@
-package bot;
-
-import lang;
+package data;
 
 //敵方數值
 public class use_mob {

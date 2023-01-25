@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import bot.use_mob;
-import mob.random;
+import data.use_mob;
+import data.player;
 
 public class events {
     // 敘述
@@ -19,15 +19,15 @@ public class events {
             Scanner your_name = new Scanner(System.in);
             System.out.println("請輸入你的名子");
             String player_name = your_name.nextLine();
-            player.player.name = player_name;
+            player.name = player_name;
             boolean start_name = true;
             start_name = true;
             while (start_name) {
-                if (player.player.name.equals("")) {
+                if (player.name.equals("")) {
                     System.out.println("不能輸入空白!!" + "請重新輸入");
                     start_name = false;
                 } else {
-                    System.out.println("確認你的名子取名為 " + player.player.name + " ?");
+                    System.out.println("確認你的名子取名為 " + player.name + " ?");
                     System.out.println("[ Y / N ]");
                     Scanner your_name_text = new Scanner(System.in);
                     String your_name_use = your_name_text.nextLine();
@@ -58,29 +58,30 @@ public class events {
                 "魔法商人" };
         Random = event_area[new Random().nextInt(event_area.length)];
         TimeUnit.SECONDS.sleep(1);
-        System.out.println(bot.text.info_system + bot.text.info_move + ".");
+        System.out.println(data.text.info_system + data.text.info_move + ".");
         TimeUnit.SECONDS.sleep(1);
-        System.out.println(bot.text.info_system + bot.text.info_move + "..");
+        System.out.println(data.text.info_system + data.text.info_move + "..");
         TimeUnit.SECONDS.sleep(1);
-        System.out.println(bot.text.info_system + bot.text.info_move + "...");
+        System.out.println(data.text.info_system + data.text.info_move + "...");
         TimeUnit.SECONDS.sleep(1);
-        System.out.println(bot.text.info_system + "事件發生 " + Random);
+        System.out.println(data.text.info_system + "事件發生 " + Random);
         event();
     }
 
     // 尋找事件 回應
     public void event() throws Exception {
         if (Random.equals("戰鬥")) {
-            random.random();
-            System.out.println(bot.text.info_system + "遇到 : " + use_mob.name);
+            mob.random.random();
+            System.out.println(data.text.info_system + "遇到 : " + use_mob.name);
             event.round.round_set();
         } else if (Random.equals("營火")) {
-            System.out.println(bot.text.info_system + "找到休息區域");
+            System.out.println(data.text.info_system + "找到休息區域");
+            object.campfire.resp.trigger();
         } else if (Random.equals("武器商人")) {
-            System.out.println(bot.text.info_system + "遇見武器商人");
+            System.out.println(data.text.info_system + "遇見武器商人");
             mob.npc.equipment_trader.random_npc();
         } else if (Random.equals("魔法商人")) {
-            System.out.println(bot.text.info_system + "遇見魔法商人");
+            System.out.println(data.text.info_system + "遇見魔法商人");
             mob.npc.skills_merchant.random_npc();
 
         }

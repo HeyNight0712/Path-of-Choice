@@ -1,10 +1,11 @@
+package main;
 
 import java.util.Scanner;
 
-import bot.system_value;
-import event.load;
-import player.control;
-import player.player;
+import data.player;
+import data.system_value;
+import event.player.control;
+import event.set.load;
 
 public class main {
     static boolean player_survive = true;

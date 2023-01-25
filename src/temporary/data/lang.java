@@ -1,3 +1,4 @@
+package data;
 
 public class lang {
     public static String move = "移動";
@@ -7,8 +8,8 @@ public class lang {
     public static String Attributes = "屬性";
 
     public static String HP = "HP";
-    public static String MP = "MP";
-    public static String Damage = "傷害";
+    static String MP = "MP";
+    static String Damage = "傷害";
     public static String Defense = "防禦";
     public static String EXP = "EXP";
     public static String GOLD = "GOLD";

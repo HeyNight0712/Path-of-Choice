@@ -4,12 +4,19 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import bot.bot;
+import data.lang;
+import data.use_mob;
+import data.player;
+import data.system_value;
+import event.fighting.att_def;
+import object.AI.bot;
 
 //計算回合 /天數
 public class round {
     // 物件導入
-
+    player player = new player();
+    use_mob mob = new use_mob();
+    system_value system_value = new system_value();
     static bot bot = new bot();
     // 未實施
     public static int Day;
@@ -24,23 +31,23 @@ public class round {
     // 隨機回合
     public static void round_set() throws Exception {
         Random rand = new Random();
-        bot.system_value.round = rand.nextInt(2);
+        data.system_value.round = rand.nextInt(2);
         who();
     }
 
     // 隨機回合反應
     public static void who() throws Exception {
         TimeUnit.SECONDS.sleep(2);
-        if (bot.system_value.round == 0) {
-            System.out.println("\n" + "輪到 " + player.player.name);
+        if (data.system_value.round == 0) {
+            System.out.println("\n" + "輪到 " + data.player.name);
             System.out.println("==========");
             user();
-            bot.system_value.round = 1;
-        } else if (bot.system_value.round == 1) {
+            data.system_value.round = 1;
+        } else if (data.system_value.round == 1) {
             System.out.println("\n" + "輪到 " + use_mob.name);
             System.out.println("==========");
             bot.probability();
-            bot.system_value.round = 0;
+            data.system_value.round = 0;
         } else {
             System.out.println("回合錯誤 請回報!!!");
         }
@@ -59,7 +66,7 @@ public class round {
         while (true) {
             Scanner player_text = new Scanner(System.in);
             System.out.println(
-                    "[1] " + lang.attack + " [2] " + lang.defense + " [3] " + lang.skill + " [4] " + lang.item
+                    "[1] " + lang.attack + " [2] " + lang.Defense + " [3] " + lang.skill + " [4] " + lang.item
                             + " [5] " + lang.Attributes);
             player_text_use = player_text.nextLine();
             player_use = player_text_use;
@@ -68,7 +75,7 @@ public class round {
                 combat.ATT();
                 break;
             } else if (player_use.equals("2")) {
-                System.out.println("你使用 " + lang.defense);
+                System.out.println("你使用 " + lang.Defense);
                 combat.ATT();
                 break;
             } else if (player_use.equals("3")) {

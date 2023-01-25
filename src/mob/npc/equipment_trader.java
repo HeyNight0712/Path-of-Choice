@@ -24,7 +24,7 @@ public class equipment_trader {
     // NPC 隨機對話
     public static void getNPCTalk() throws Exception {
         Gson gson = new Gson();
-        FileReader reader = new FileReader("lang/" + bot.system_value.lang + ".json");
+        FileReader reader = new FileReader("lang/" + data.system_value.lang + ".json");
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
         JsonObject player = jsonObject.getAsJsonObject("equipment_trader").getAsJsonObject(Random);
         String name = player.get("name").getAsString();

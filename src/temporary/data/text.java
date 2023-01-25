@@ -1,4 +1,4 @@
-package bot;
+package data;
 
 public class text {
     public static String info_system = "【後台】 ";

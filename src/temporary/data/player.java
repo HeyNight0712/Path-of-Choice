@@ -1,12 +1,7 @@
-package player;
-
-import lang;
-import bot.text;
+package data;
 
 //玩家數值
 public class player {
-    public static final String player = null;
-
     public static String name = "None";
 
     public static int HP;

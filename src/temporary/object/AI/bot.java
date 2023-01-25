@@ -1,13 +1,13 @@
-package bot;
+package object.AI;
 
 import java.util.Random;
 
-import lang;
-import player.att_def;
+import data.lang;
+import data.use_mob;
+import event.fighting.att_def;
 
 public class bot {
     att_def combat = new att_def();
-    public Object system_value;
     public static int bot_use;
 
     public void probability() throws Exception {

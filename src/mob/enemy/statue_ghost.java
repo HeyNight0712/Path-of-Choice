@@ -6,8 +6,8 @@ import java.io.FileReader;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-import bot.system_value;
-import bot.use_mob;
+import data.system_value;
+import data.use_mob;
 
 public class statue_ghost {
     // 重新載入 怪物數值
