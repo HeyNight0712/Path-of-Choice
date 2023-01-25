@@ -32,11 +32,11 @@ public class att_def {
                     break;
                 }
                 if (60 >= bot.bot_use && 89 <= bot.bot_use) {
-                    System.out.println(use_mob.name + "專注著" + lang.defense);
+                    System.out.println(use_mob.name + "專注著" + lang.Defense);
                     Def = (int) ((float) Def * 1.5);
                 }
                 if (Hit + Dam <= Def) {
-                    System.out.println(use_mob.name + " " + lang.defense + "成功");
+                    System.out.println(use_mob.name + " " + lang.Defense + "成功");
                 } else if (Hit + Dam >= Def) {
                     if ((Hit + Dam) >= player.Damage) {
                         Dam = player.Damage;
@@ -56,11 +56,11 @@ public class att_def {
                 Def = player.Defense;
                 // 如果 玩家 Hit + Dam數值 > Dam 時 則 傷害輸出 = monster.Damage
                 if (round.player_text_use.equals("2")) {
-                    System.out.println(player.name + "專注著" + lang.defense);
+                    System.out.println(player.name + "專注著" + lang.Defense);
                     Def = (int) ((float) Def * 1.5);
                 }
                 if (Hit + Dam <= Def) {
-                    System.out.println(player.name + " " + lang.defense + "成功");
+                    System.out.println(player.name + " " + lang.Defense + "成功");
                 } else if (Hit + Dam >= Def) {
                     if ((Hit + Dam) >= use_mob.Damage) {
                         Dam = use_mob.Damage;

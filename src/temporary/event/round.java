@@ -66,7 +66,7 @@ public class round {
         while (true) {
             Scanner player_text = new Scanner(System.in);
             System.out.println(
-                    "[1] " + lang.attack + " [2] " + lang.defense + " [3] " + lang.skill + " [4] " + lang.item
+                    "[1] " + lang.attack + " [2] " + lang.Defense + " [3] " + lang.skill + " [4] " + lang.item
                             + " [5] " + lang.Attributes);
             player_text_use = player_text.nextLine();
             player_use = player_text_use;
@@ -75,7 +75,7 @@ public class round {
                 combat.ATT();
                 break;
             } else if (player_use.equals("2")) {
-                System.out.println("你使用 " + lang.defense);
+                System.out.println("你使用 " + lang.Defense);
                 combat.ATT();
                 break;
             } else if (player_use.equals("3")) {

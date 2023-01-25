@@ -12,10 +12,6 @@ public class load {
     public static void read() throws Exception {
         System.out.println("偵測檔案");
         System.out.println("====================");
-        file.config.config_folder();
-        file.lang.lang_folder();
-        file.language.zh_tw.create_file();
-        data.lang.lang_use();
         data.player.restart();
         System.out.println("====================");
         TimeUnit.SECONDS.sleep(1);
