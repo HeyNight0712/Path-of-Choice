@@ -1,4 +1,4 @@
-package object.mob.statue_ghost;
+package mob.enemy;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,7 +9,7 @@ import com.google.gson.JsonObject;
 import data.system_value;
 import data.use_mob;
 
-public class data {
+public class statue_ghost {
     // 重新載入 怪物數值
     public static void read() throws FileNotFoundException {
         Gson gson = new Gson();

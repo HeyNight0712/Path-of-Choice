@@ -1,4 +1,4 @@
-package object.npc.skills_merchant;
+package mob.npc;
 
 import java.io.FileReader;
 import java.util.Random;
@@ -6,7 +6,7 @@ import java.util.Random;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-public class npc {
+public class skills_merchant {
 
     // 寫入 npc ID
     public static String[] talktype = {

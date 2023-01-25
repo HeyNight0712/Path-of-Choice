@@ -1,4 +1,4 @@
-package object.mob;
+package mob;
 
 import java.io.FileNotFoundException;
 import java.util.Random;
@@ -23,34 +23,34 @@ public class random {
         String Random = rand_mob[new Random().nextInt(rand_mob.length)];
         switch (Random) {
             case "demon":
-                object.mob.demon.data.read();
+                mob.enemy.demon.read();
                 break;
             case "fairy":
-                object.mob.fairy.data.read();
+                mob.enemy.fairy.read();
                 break;
             case "ghost":
-                object.mob.ghost.data.read();
+                mob.enemy.ghost.read();
                 break;
             case "kitsune":
-                object.mob.kitsune.data.read();
+                mob.enemy.kitsune.read();
                 break;
             case "lich":
-                object.mob.lich.data.read();
+                mob.enemy.lich.read();
                 break;
             case "orc":
-                object.mob.orc.data.read();
+                mob.enemy.orc.read();
                 break;
             case "skeleton":
-                object.mob.skeleton.data.read();
+                mob.enemy.skeleton.read();
                 break;
             case "statue_ghost":
-                object.mob.statue_ghost.data.read();
+                mob.enemy.statue_ghost.read();
                 break;
             case "vampire":
-                object.mob.vampire.data.read();
+                mob.enemy.vampire.read();
                 break;
             case "zombie":
-                object.mob.zombie.data.read();
+                mob.enemy.zombie.read();
                 break;
         }
     }

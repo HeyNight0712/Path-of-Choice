@@ -1,4 +1,4 @@
-package object.mob.lich;
+package mob.enemy;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,14 +9,14 @@ import com.google.gson.JsonObject;
 import data.system_value;
 import data.use_mob;
 
-public class data {
+public class kitsune {
     // 重新載入 怪物數值
     public static void read() throws FileNotFoundException {
         Gson gson = new Gson();
         FileReader reader = new FileReader("lang/" + system_value.lang + ".json");
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
         JsonObject mob = jsonObject.getAsJsonObject("mobslist");
-        use_mob.name = mob.get("Lich").getAsString();
+        use_mob.name = mob.get("Kitsune").getAsString();
         use_mob.HP = 25;
         use_mob.HP_max = use_mob.HP;
         use_mob.MP = 10;
