@@ -9,7 +9,11 @@
             "type": "java",
             "name": "主載入",
             "request": "launch",
+<<<<<<< HEAD
             "mainClass": "temporary.main.main",
+=======
+            "mainClass": "main.main",
+>>>>>>> a84d1432e7e6cc1b6dc5d4ded1b440a0c93e5913
             "projectName": "word_71c137b0",
             "vmArgs": "--module-path \"G:/java/javafx-sdk-19.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         }
